@@ -39,10 +39,23 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ## 📦 Project Structure
 
+```
+.
+├── Experiment 1.py
+├── Experiment 2.py
+├── Experiment 3.py
+├── Experiment 4.py
+├── Experiment 5.py
+├── profiler_*_summary.txt     # Text summaries from PyTorch profiler
+├── profiler_*_trace.json      # Chrome trace files
+├── *.pth                      # Saved model weights
+├── *.csv / *.png              # Batch tuning outputs (Exp 4)
+└── README.md
+```
 
 ---
 
-## 🧠 Key Concepts
+## 🧐 Key Concepts
 
 - **autocast()**: Automatically chooses FP16 for safe operations and FP32 for sensitive ones.
 - **GradScaler()**: Dynamically scales gradients to avoid underflow in FP16 training.
@@ -59,13 +72,72 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ---
 
-## ✅ Requirements
+## 🛠️ Setup Instructions
+
+### 1. ✅ Create and Activate Virtual Environment
+```bash
+# Windows (CMD)
+python -m venv .venv
+.\.venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 2. ✅ Install Dependencies
+```bash
+pip install torch torchvision matplotlib tqdm psutil
+```
+Make sure CUDA is available if running GPU experiments. You can check using:
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+---
+
+## 🔄 Running the Experiments
+
+You can run each file independently from the terminal or Python shell.
+Make sure your terminal is in the folder that contains the script files.
+
+### Example (from project root directory):
+```bash
+python "Experiment 1.py"
+python "Experiment 2.py"
+python "Experiment 3.py"
+python "Experiment 4.py"
+python "Experiment 5.py"
+```
+
+If you use Python interactively:
+```python
+>>> exec(open("Experiment 3.py").read())
+```
+
+### Optional:
+If you change file locations or environment, make sure to adjust paths in `DataLoader` or `torch.load()` accordingly.
+
+---
+
+## 📅 Requirements
 
 - Python 3.8+  
 - PyTorch 1.13+  
-- CUDA-enabled GPU (for GPU experiments)  
+- CUDA-capable GPU (for Experiments 3–5)  
 - tqdm, matplotlib, psutil
 
-```bash
-pip install torch torchvision matplotlib tqdm psutil
+---
 
+## 📙 References
+
+- [PyTorch AMP Documentation](https://pytorch.org/docs/stable/amp.html)
+- [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+- [torch.profiler](https://pytorch.org/docs/stable/profiler.html)
+
+---
+
+## 🙌 Authors
+This project was developed as a deep learning profiling and optimization study.
+
+Feel free to fork and build on this for further experimentation!
