@@ -1,0 +1,15 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+autograd::engine::evaluate_function: ConvolutionBack...         0.06%       4.226ms        85.54%        6.495s      32.476ms           200  
+                                   ConvolutionBackward0         0.02%       1.239ms        85.39%        6.483s      32.417ms           200  
+                             aten::convolution_backward        85.24%        6.472s        85.37%        6.482s      32.410ms           200  
+                                           aten::conv2d         0.01%     699.900us         7.58%     575.590ms       2.878ms           200  
+                                      aten::convolution         0.03%       2.488ms         7.57%     574.891ms       2.874ms           200  
+                                     aten::_convolution         0.02%       1.793ms         7.54%     572.403ms       2.862ms           200  
+                               aten::mkldnn_convolution         7.49%     568.487ms         7.51%     570.610ms       2.853ms           200  
+                                Optimizer.step#SGD.step         0.17%      13.210ms         2.73%     206.911ms      20.691ms            10  
+                                              aten::add         1.34%     101.501ms         1.34%     101.501ms     163.712us           620  
+autograd::engine::evaluate_function: NativeBatchNorm...         0.03%       2.381ms         1.11%      83.973ms     419.863us           200  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 7.593s

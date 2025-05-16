@@ -1,0 +1,16 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             aten::convolution_backward         6.19%     122.885ms        19.93%     395.881ms       1.979ms     116.415ms        48.30%     116.415ms     582.074us           200  
+                                Optimizer.step#SGD.step         0.00%       0.000us         0.00%       0.000us       0.000us      50.874ms        21.11%      50.874ms       5.087ms            10  
+                                aten::cudnn_convolution        16.92%     336.118ms        28.88%     573.804ms       2.869ms      49.606ms        20.58%      71.065ms     355.325us           200  
+_ZN5cudnn19engines_precompiled16nchwToNhwcKernelIfff...         0.00%       0.000us         0.00%       0.000us       0.000us      40.079ms        16.63%      40.079ms      40.897us           980  
+sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f3...         0.00%       0.000us         0.00%       0.000us       0.000us      19.273ms         8.00%      19.273ms     214.142us            90  
+                                    aten::_foreach_add_         0.20%       3.909ms         0.26%       5.073ms     267.005us      16.704ms         6.93%      17.584ms     925.480us            19  
+_ZN2at6native55_GLOBAL__N__3e70d511_22_ForeachBinary...         0.00%       0.000us         0.00%       0.000us       0.000us      16.704ms         6.93%      16.704ms     879.158us            19  
+                       Runtime Triggered Module Loading        26.64%     529.136ms        26.64%     529.136ms       3.481ms      16.611ms         6.89%      16.611ms     109.284us           152  
+_ZN5cudnn19engines_precompiled16nhwcToNchwKernelIfff...         0.00%       0.000us         0.00%       0.000us       0.000us      14.196ms         5.89%      14.196ms      40.560us           350  
+                        aten::cudnn_batch_norm_backward         0.80%      15.895ms         2.53%      50.270ms     251.347us      12.790ms         5.31%      12.790ms      63.950us           200  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 1.987s
+Self CUDA time total: 241.049ms

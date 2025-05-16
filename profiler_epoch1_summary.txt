@@ -1,0 +1,15 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+autograd::engine::evaluate_function: ConvolutionBack...         0.05%       9.415ms        63.94%       12.303s      61.516ms           200  
+                                   ConvolutionBackward0         0.01%       1.929ms        63.83%       12.282s      61.409ms           200  
+                             aten::convolution_backward        63.60%       12.238s        63.81%       12.280s      61.400ms           200  
+                                           aten::conv2d         0.01%       1.380ms        20.31%        3.907s      19.537ms           200  
+                                      aten::convolution         0.03%       5.010ms        20.30%        3.906s      19.530ms           200  
+                                     aten::_convolution         0.01%       2.792ms        20.27%        3.901s      19.505ms           200  
+                               aten::mkldnn_convolution        20.24%        3.894s        20.26%        3.898s      19.491ms           200  
+enumerate(DataLoader)#_SingleProcessDataLoaderIter._...         3.78%     727.686ms         5.85%        1.126s     112.625ms            10  
+autograd::engine::evaluate_function: NativeBatchNorm...         0.02%       4.324ms         3.27%     629.479ms       3.147ms           200  
+                               NativeBatchNormBackward0         0.01%       2.128ms         3.25%     625.155ms       3.126ms           200  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 19.243s
