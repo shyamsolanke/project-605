@@ -120,7 +120,7 @@ If you change file locations or environment, make sure to adjust paths in `DataL
 
 ---
 
-## 📅 Requirements
+##  Requirements
 
 - Python 3.8+  
 - PyTorch 1.13+  
@@ -129,7 +129,7 @@ If you change file locations or environment, make sure to adjust paths in `DataL
 
 ---
 
-## 📙 References
+##  References
 
 - [PyTorch AMP Documentation](https://pytorch.org/docs/stable/amp.html)
 - [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
