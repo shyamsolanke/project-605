@@ -137,7 +137,7 @@ If you change file locations or environment, make sure to adjust paths in `DataL
 
 ---
 
-## 🙌 Authors
+##  Authors
 This project was developed as a deep learning profiling and optimization study.
 
 Feel free to fork and build on this for further experimentation!
