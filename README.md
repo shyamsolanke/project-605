@@ -1,10 +1,10 @@
-# 🚀 ResNet-18 Performance Profiling on CIFAR-10
+#  ResNet-18 Performance Profiling on CIFAR-10
 
 This project analyzes and optimizes the training performance of **ResNet-18** on the **CIFAR-10** dataset using **PyTorch**. It involves profiling and benchmarking across multiple hardware setups, including CPU (single and multi-threaded), GPU (FP32), and GPU with **Automatic Mixed Precision (AMP)**.
 
 ---
 
-## 📌 Project Objectives
+##  Project Objectives
 
 - Identify computational and memory bottlenecks during training  
 - Measure and compare training **throughput**, **epoch time**, and **GPU memory usage**  
@@ -14,7 +14,7 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ---
 
-## 🧪 Experiments Conducted
+##  Experiments Conducted
 
 | Experiment | Setup                         | Key Features                       |
 |------------|-------------------------------|------------------------------------|
@@ -26,7 +26,7 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ---
 
-## 📊 Key Results Summary
+##  Key Results Summary
 
 | Metric               | Exp 1 (CPU 1T) | Exp 2 (CPU 6T) | Exp 3 (GPU FP32) | Exp 5 (GPU AMP) |
 |----------------------|----------------|----------------|------------------|-----------------|
@@ -37,7 +37,7 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ---
 
-## 📦 Project Structure
+##  Project Structure
 
 ```
 .
@@ -55,7 +55,7 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ---
 
-## 🧐 Key Concepts
+##  Key Concepts
 
 - **autocast()**: Automatically chooses FP16 for safe operations and FP32 for sensitive ones.
 - **GradScaler()**: Dynamically scales gradients to avoid underflow in FP16 training.
@@ -63,7 +63,7 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ---
 
-## 📈 Insights
+##  Insights
 
 - GPU + AMP achieved **35× speedup** over single-threaded CPU.
 - AMP reduced GPU memory usage while preserving accuracy.
@@ -72,9 +72,9 @@ This project analyzes and optimizes the training performance of **ResNet-18** on
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
-### 1. ✅ Create and Activate Virtual Environment
+### 1.  Create and Activate Virtual Environment
 ```bash
 # Windows (CMD)
 python -m venv .venv
@@ -85,7 +85,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 2. ✅ Install Dependencies
+### 2.  Install Dependencies
 ```bash
 pip install torch torchvision matplotlib tqdm psutil
 ```
@@ -96,7 +96,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ---
 
-## 🔄 Running the Experiments
+##  Running the Experiments
 
 You can run each file independently from the terminal or Python shell.
 Make sure your terminal is in the folder that contains the script files.
